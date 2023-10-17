@@ -29,17 +29,59 @@ namespace laboratorna1
             string nname = name.Text;
             int aage;
             double hheight;
+     
 
             if (int.TryParse(age.Text, out aage) && double.TryParse(height.Text, out hheight))
             {
-                tr = new Tree(nname, hheight, aage);
-                double averageGrowth = tr.CalculateAverageGrowthPerYear();
-                result.Text = $"Середній приріст деревини в рік: {averageGrowth} см/рок";
+                if (aage < 0 || hheight < 0)
+                {
+                    result.Text = $"Неправильно ти подав данi!";
+
+                }
+                else if (name.Text == "")
+                {
+                    result.Text = $"Неправильно ти подав данi!!!!!!!!";
+
+                }
+                else
+                {
+                    tr = new Tree(nname, hheight, aage);
+                    double averageGrowth = tr.CalculateAverageGrowthPerYear();
+                    result.Text = $"Середній приріст деревини в рік: {averageGrowth} см/рок";
+                }
+            }
+            else if(int.TryParse(age.Text, out aage))
+            {
+                if (aage < 0)
+                {
+                    result.Text = $"Неправильно ти подав данi!";
+                }
+                else
+                {
+                    tr = new Tree(nname, aage);
+                    result.Text = $"Упс, певно ви забили ввести висоту дерева!";
+                }
+            }
+            else if(double.TryParse(height.Text, out hheight))
+            {
+                if (hheight < 0)
+                {
+                    result.Text = $"Неправильно ти подав данi!";
+
+                }
+                else
+                {
+                    tr = new Tree(nname, hheight);
+                    result.Text = $"Упс, певно ви забили ввести вiк дерева!";
+                }
             }
             else
             {
                 result.Text = "Помилка: Невірний формат введених даних.";
             }
+
+
+         
         }
     }
 }

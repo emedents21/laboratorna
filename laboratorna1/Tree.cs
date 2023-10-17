@@ -15,23 +15,42 @@ namespace laboratorna1
 
         public Tree(string name, double height, int age)
         {
-            if (string.IsNullOrWhiteSpace(name))
-            {
-                throw new ArgumentException("Назва дерева не може бути порожньою або null.", nameof(name));
-            }
-            if (height < 0)
-            {
-                throw new ArgumentException("Висота дерева не може бути від'ємною.", nameof(height));
-            }
-            if (age < 0)
-            {
-                throw new ArgumentException("Вік дерева не може бути від'ємним.", nameof(age));
-            }
-
             this.name = name;
             this.height = height;
             this.age = age;
         }
+
+
+        public Tree(string name, double height)
+        {
+            this.name = name;
+            this.height = height;
+            this.age = 0;
+        }
+
+        public Tree(string name, int age)
+        {
+            this.name = name;
+            this.height = 0;
+            this.age = age;
+        }
+
+        public Tree(int age, double height)
+        {
+            this.name = "";
+            this.age = age;
+            this.height = height;
+        }
+
+        public Tree()
+        {
+            this.name = "";
+            this.age = 0;
+            this.height = 0;
+        }
+
+
+
         public double CalculateAverageGrowthPerYear()
         {
             if (age == 0)
@@ -42,7 +61,8 @@ namespace laboratorna1
             return height / age;
         }
 
-     
+       
     }
+
 }
 
