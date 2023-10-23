@@ -11,9 +11,9 @@ namespace Laba2
         private string color;
         private double n;
 
-        public Line(string назва, double початкова, double кінцева, string колір, double n) : base(назва, початкова, кінцева)
+        public Line(string name, double start, double konec, string color, double n) : base(name, start, konec)
         {
-            this.color = колір;
+            this.color = color;
             this.n = n;
         }
 
@@ -22,9 +22,9 @@ namespace Laba2
             return color;
         }
 
-        public void setcolor(string колір)
+        public void setcolor(string color)
         {
-            this.color = колір;
+            this.color = color;
         }
         public double getN()
         {
@@ -36,9 +36,9 @@ namespace Laba2
             this.n = n;
         }
 
-        public double Збільшення_Довжини(double коефіцієнт)
+        public double addLenght(double коефіцієнт)
         {
-           return n * Довжина();
+           return n * Lenght();
         }
     }
 }

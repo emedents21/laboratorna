@@ -34,11 +34,13 @@ namespace Laba2
 
         private void синToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            toolStripMenuItem1.Text = Convert.ToString(синToolStripMenuItem);
 
         }
 
         private void бiToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            toolStripMenuItem1.Text = Convert.ToString(бiToolStripMenuItem);
 
         }
 
@@ -60,8 +62,8 @@ namespace Laba2
                 n // Передаємо n
             );
 
-            label6.Text = vidrizok.Довжина().ToString();
-            label8.Text = linie.Збільшення_Довжини(n).ToString();
+            label6.Text = vidrizok.Lenght().ToString();
+            label8.Text = linie.addLenght(n).ToString();
         }
 
 
@@ -87,6 +89,24 @@ namespace Laba2
 
         private void label8_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void червонийToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStripMenuItem1.Text = Convert.ToString(червонийToolStripMenuItem);
+
+        }
+
+        private void зеленийToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStripMenuItem1.Text = Convert.ToString(зеленийToolStripMenuItem);
+
+        }
+
+        private void чорнийToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStripMenuItem1.Text = Convert.ToString(чорнийToolStripMenuItem);
 
         }
     }

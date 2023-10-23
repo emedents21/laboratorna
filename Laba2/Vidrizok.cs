@@ -12,21 +12,21 @@ namespace Laba2
         private double start;
         private double konec;
 
-        public Vidrizok(string назва, double початкова, double кінцева)
+        public Vidrizok(string name, double start, double konec)
         {
-            this.name = назва;
-            this.start = початкова;
-            this.konec = кінцева;
+            this.name = name;
+            this.start = start;
+            this.konec = konec;
         }
-
+        
         public string getname()
         {
             return name;
         }
 
-        public void setname(string назва)
+        public void setname(string name)
         {
-            this.name = назва;
+            this.name = name;
         }
 
         public double getstart()
@@ -34,9 +34,9 @@ namespace Laba2
             return start;
         }
 
-        public void setstart(double початкова)
+        public void setstart(double start)
         {
-            this.start = початкова;
+            this.start = start;
         }
 
         public double getkonec()
@@ -44,12 +44,12 @@ namespace Laba2
             return konec;
         }
 
-        public void setkonec(double кінцева)
+        public void setkonec(double konec)
         {
-            konec = кінцева;
+            this.konec = konec;
         }
 
-        public double Довжина()
+        public double Lenght()
         {
             return Math.Abs(konec - start);
         }
