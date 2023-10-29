@@ -72,5 +72,16 @@ namespace Laba2
         {
 
         }
+
+        private void абстракiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void abstractToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var FWindow = new Form2();
+            FWindow.Show();
+        }
     }
 }

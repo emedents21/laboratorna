@@ -31,13 +31,16 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.Inheritance = new System.Windows.Forms.ToolStripMenuItem();
             this.inheritanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.абстракiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.abstractToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Inheritance});
+            this.Inheritance,
+            this.абстракiToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -60,6 +63,22 @@
             this.inheritanceToolStripMenuItem.Text = "Inheritance";
             this.inheritanceToolStripMenuItem.Click += new System.EventHandler(this.inheritanceToolStripMenuItem_Click);
             // 
+            // абстракiToolStripMenuItem
+            // 
+            this.абстракiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.abstractToolStripMenuItem});
+            this.абстракiToolStripMenuItem.Name = "абстракiToolStripMenuItem";
+            this.абстракiToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.абстракiToolStripMenuItem.Text = "Абстракцiя";
+            this.абстракiToolStripMenuItem.Click += new System.EventHandler(this.абстракiToolStripMenuItem_Click);
+            // 
+            // abstractToolStripMenuItem
+            // 
+            this.abstractToolStripMenuItem.Name = "abstractToolStripMenuItem";
+            this.abstractToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.abstractToolStripMenuItem.Text = "Abstract";
+            this.abstractToolStripMenuItem.Click += new System.EventHandler(this.abstractToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -81,6 +100,8 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem Inheritance;
         private System.Windows.Forms.ToolStripMenuItem inheritanceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem абстракiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem abstractToolStripMenuItem;
     }
 }
 
